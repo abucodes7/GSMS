@@ -1,11 +1,11 @@
 const products = [
-    { id: 1, name: "Fresh Apples", price: 2.99, image: "https://source.unsplash.com/200x200/?apple" },
-    { id: 2, name: "Organic Bananas", price: 1.99, image: "https://source.unsplash.com/200x200/?banana" },
-    { id: 3, name: "Carrots", price: 0.99, image: "https://source.unsplash.com/200x200/?carrot" },
-    { id: 4, name: "Tomatoes", price: 1.49, image: "https://source.unsplash.com/200x200/?tomato" },
-    { id: 5, name: "Potatoes", price: 0.89, image: "https://source.unsplash.com/200x200/?potato" },
-    { id: 6, name: "Oranges", price: 3.49, image: "https://source.unsplash.com/200x200/?orange" },
-    { id: 7, name: "Broccoli", price: 2.29, image: "https://source.unsplash.com/200x200/?broccoli" }
+    { id: 1, name: "Fresh Apples", price: 2.99, image: "https://via.placeholder.com/200?text=Apples" },
+    { id: 2, name: "Organic Bananas", price: 1.99, image: "https://via.placeholder.com/200?text=Bananas" },
+    { id: 3, name: "Carrots", price: 0.99, image: "https://via.placeholder.com/200?text=Carrots" },
+    { id: 4, name: "Tomatoes", price: 1.49, image: "https://via.placeholder.com/200?text=Tomatoes" },
+    { id: 5, name: "Potatoes", price: 0.89, image: "https://via.placeholder.com/200?text=Potatoes" },
+    { id: 6, name: "Oranges", price: 3.49, image: "https://via.placeholder.com/200?text=Oranges" },
+    { id: 7, name: "Broccoli", price: 2.29, image: "https://via.placeholder.com/200?text=Broccoli" }
 ];
 
 let cart = [];
@@ -59,11 +59,6 @@ function checkout() {
     alert(`Thank you for your purchase! Total: $${cart.reduce((sum, item) => sum + item.price, 0).toFixed(2)}`);
     cart = [];
     updateCart();
-}
-
-function searchProducts() {
-    const searchTerm = document.getElementById("search").value.toLowerCase();
-    displayProducts(products.filter(product => product.name.toLowerCase().includes(searchTerm)));
 }
 
 displayProducts();
