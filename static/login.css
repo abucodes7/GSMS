@@ -1,0 +1,54 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    background-image: url('path_to_background_image.jpg'); /* Update with actual image URL */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* semi-transparent dark background */
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #333;
+    border: 1px solid #555;
+    color: white;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #e60000;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff3333;
+}
+
+p {
+    color: #ccc;
+}
+
+a {
+    color: #ff3333;
+    text-decoration: none;
+}

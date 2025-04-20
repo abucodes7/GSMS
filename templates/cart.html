@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Cart</title>
+  <link rel="stylesheet" href="products.css">
+</head>
+<body class="cart-page">
+  <h1>Your Cart 🛒</h1>
+  {% if cart %}
+    <ul>
+      {% for item in cart %}
+        <li>{{ item.name }} — ₹{{ item.price }}</li>
+      {% endfor %}
+    </ul>
+    <h3>Estimated Time for Pickup: <span>{{ time }}</span> minutes</h3>
+  {% else %}
+    <p>Your cart is empty.</p>
+  {% endif %}
+  <a href="/products" class="btn">Continue Shopping</a>
+</body>
+</html>
