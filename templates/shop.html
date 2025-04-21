@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop - GSMS</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dark">
+  <h1>Welcome to the Shop!</h1>
+  <a href="/cart">🛒 View Cart</a> | 
+  <a href="/logout">Logout</a>
+  <div class="product-list">
+    {% for p in products %}
+      <div class="product-card">
+        <img src="{{ p.image }}" alt="{{ p.name }}" height="100"><br>
+        <strong>{{ p.name }}</strong><br>
+        {{ p.qty }} | {{ p.price }}<br>
+        <a href="/add-to-cart/{{ p.id }}">➕ Add to Cart</a>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
